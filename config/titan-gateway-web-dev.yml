@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-9003.com:9003/eureka/
+      defaultZone: http://eureka-9002.com:9002/eureka/
 spring:
   application:
     name: titan-gateway-web
