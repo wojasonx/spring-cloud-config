@@ -14,5 +14,5 @@ feign:
     enabled: true
 
 
-info:
-  profile: 哈哈哈
+# info:
+ # profile: 哈哈哈
