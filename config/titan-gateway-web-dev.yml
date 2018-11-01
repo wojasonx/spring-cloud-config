@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-9003.com:9003/eureka/
+spring:
+  application:
+    name: titan-gateway-web
+
+feign:
+  hystrix:
+    enabled: true
