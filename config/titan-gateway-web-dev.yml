@@ -13,4 +13,6 @@ feign:
   hystrix:
     enabled: true
 
-    
+
+info:
+  profile: abc
