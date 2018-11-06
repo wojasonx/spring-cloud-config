@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-9003.com:9003/eureka/
+spring:
+  application:
+    name: titan-order-service
+
+  zipkin:
+    base-url: http://192.168.23.41:9411/
+#    base-url: http://localhost:9411/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
