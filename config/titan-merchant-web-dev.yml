@@ -1,0 +1,6 @@
+project:
+  pay:
+    doamin: http://localhost:8091/
+  aesKey: fadf23r5cgagfa45
+  fileupload:
+    url: D:/logo/
