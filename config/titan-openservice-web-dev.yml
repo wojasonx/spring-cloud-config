@@ -64,7 +64,7 @@ hystrix:
 
 titan:
   seaweed:
-    host: 192.168.23.18
-    port: 9333
-    a: abcabc
-    b: 111
+    host: 192.168.23.9
+    port: 9331
+    a: ccc
+    b: 333
