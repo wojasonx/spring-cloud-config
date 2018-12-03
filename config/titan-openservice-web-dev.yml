@@ -66,3 +66,5 @@ titan:
   seaweed:
     host: 192.168.23.18
     port: 9333
+    a: aabbcc
+    b: 123123
