@@ -1,0 +1,87 @@
+server:
+  port: 8084
+
+
+spring:
+  application:
+    name: titan-oauth2-server
+
+  zipkin:
+    base-url: http://192.168.23.41:9411/
+  #    base-url: http://localhost:9411/
+  cache:
+    redis:
+      use-key-prefix: true
+      time-to-live: 9d
+  redis:
+    database: 0
+    password:
+    #    cluster:
+    #      max-redirects: 3
+    #      nodes:
+    #      - localhost:6379
+    #      - 192.168.131.140:6379
+    lettuce:
+      pool:
+        max-active:  100 # 连接池最大连接数（使用负值表示没有限制）
+        max-idle: 100 # 连接池中的最大空闲连接
+        min-idle: 50 # 连接池中的最小空闲连接
+        max-wait: 6000ms # 连接池最大阻塞等待时间（使用负值表示没有限制）
+    timeout: 1000ms
+    host: localhost
+    port: 6379
+
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+
+security:
+  oauth2:
+    client:
+      client-id: titan-oauth2-server
+      client-secret: 123456
+      access-token-uri: http://localhost:8084/oauth/token
+      user-authorization-uri: http://localhost:8084/oauth/authorize
+      grant-type: client_credentials
+      scope: oauth2Server
+
+hystrix:
+  shareSecurityContext: true
+  command:
+    RemoteRegisterService#registerMerchant(UserEntity):
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 9100
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 9100
+
+
+titan:
+  seaweed:
+    host: 192.168.23.18
+    port: 9333
+
+##无效
+#ribbon:
+#  ReadTimeout: 4000
+#  ConnectTimeout: 9000
+
+
+
+##无效
+#titan-user-service:
+#  ribbon:
+#    ConnectTimeout: 4000
+#    ReadTimeout: 4000
