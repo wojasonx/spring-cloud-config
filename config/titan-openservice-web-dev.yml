@@ -70,5 +70,5 @@ titan:
     b: 333
     
 project:
-  callbackUrl: https;//www.baidu.ocm
+  callbackUrl: https://www.baidu.com
   aesKey: fadf23r5cgagfa45
