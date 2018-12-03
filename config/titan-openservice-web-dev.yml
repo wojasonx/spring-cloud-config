@@ -68,3 +68,7 @@ titan:
     port: 9333
     a: ccc
     b: 333
+    
+project:
+  callbackUrl: http://test.com
+  aeskey: fadf23r5cgagfa45
