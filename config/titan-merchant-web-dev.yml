@@ -3,4 +3,4 @@ project:
     doamin: http://localhost:8091/
   aesKey: fadf23r5cgagfa45
   fileupload:
-    url: D:/logo/
+    url: http://192.168.23.18:9333
